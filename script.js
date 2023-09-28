@@ -26,42 +26,28 @@ const submitBtn = document.querySelector('.form-btn');
 
 submitBtn.addEventListener('click', function(event) {
     // reset errors
-    /* resetErrorStyles(); */
+    resetErrorStyles(); 
 
     // Validates the input fields
 
     if(firstNameInput.value.trim() === '') {
-        errorIconFirstName.style.display = 'block';
-        errorMessageFirstName.style.display = 'block';
-        firstNameInput.style.border = '2px solid var(--red)';
+        displayError(errorIconFirstName, errorMessageFirstName, firstNameInput);
         event.preventDefault();
     }
 
     if(lastNameInput.value.trim() === '') {
-        errorIconLastName.style.display = 'block';
-        errorMessageLastName.style.display = 'block';
-        lastNameInput.style.border = '2px solid var(--red)';
+        displayError(errorIconLastName, errorMessageLastName, lastNameInput);
         event.preventDefault();
     }
 
     if (!isValidEmail(emailInput.value.trim())) {
-        errorIconEmail.style.display = 'block';
-        errorMessageEmail.style.display = 'block';
-        emailInput.style.border = '2px solid var(--red)';
+        displayError(errorIconEmail, errorMessageEmail, emailInput);
         event.preventDefault(); 
       }
 
-    if(firstNameInput.value.trim() === '') {
-        errorIconFirstName.style.display = 'block';
-        errorMessageFirstName.style.display = 'block';
-        firstNameInput.style.border = '2px solid var(--red)';
-        event.preventDefault();
-    }
 
     if(passwordInput.value.trim() === '') {
-        errorIconPassword.style.display = 'block';
-        errorMessagePassword.style.display = 'block';
-        passwordInput.style.border = '2px solid var(--red)';
+        displayError(errorIconPassword, errorMessagePassword, passwordInput);
         event.preventDefault();
     }
 });
@@ -83,7 +69,15 @@ function resetErrorStyles() {
 
 // Function to display error message and icon
 function displayError(errorIcon, errorMessage, inputField) {
-    errorIcon.style.display = 'none';
+    errorIcon.style.display = 'block';
     errorMessage.style.display = 'block';
     inputField.style.border = '2px solid var(--red)';
+}
+
+// Function to validate email format
+function isValidEmail(email) {
+    function isValidEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+    }
 }
