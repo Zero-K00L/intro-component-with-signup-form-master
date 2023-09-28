@@ -138,6 +138,10 @@ input {
     left: 152px;
 }
 
+.password-length-error {
+    left: 68px;
+}
+
 .icon-1 {
     top: 40px;
 }

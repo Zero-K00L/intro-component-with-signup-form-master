@@ -42,9 +42,10 @@
           </div>
 
           <div class="form-box">
-            <input type="password" class="input password" name="password" placeholder="Password" required>
+            <input type="password" class="input password" name="password" placeholder="Password" required minlength="8" pattern=".{8,}">
             <img class="error-icon icon-4" src="images/icon-error.svg" alt="Error Icon">
             <p class="error-message error-message-4">Password cannot be empty</p>
+            <p class="error-message password-length-error">Password must be a least 8 characters long</p>
           </div>
 
           <button class="form-btn" type="submit">Claim your free trial</button>
