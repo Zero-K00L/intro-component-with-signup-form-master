@@ -105,10 +105,6 @@ input {
     font-weight: 600;
 }
 
-.error-border {
-
-}
-
 .error-icon {
     display: none;
     position: absolute;
@@ -192,9 +188,24 @@ input {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
 /*Very Large devices (laptops/desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
-
     body {
         background: url('images/bg-intro-desktop.png') center/contain repeat var(--red);
     }
