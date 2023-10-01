@@ -23,6 +23,9 @@ const errorMessagePassword = document.querySelector('.error-message-4');
 const form = document.querySelector('.form');
 const submitBtn = document.querySelector('.form-btn');
 
+const trialSection = document.querySelector('.trial-section');
+const bottomSpace = document.querySelector('.bottom-space');
+
 document.addEventListener('DOMContentLoaded', function() {
     firstNameInput.value = '';
     lastNameInput.value = '';
@@ -43,6 +46,7 @@ submitBtn.addEventListener('click', function(event) {
 
     if (!isValidEmail(emailInput.value.trim())) {
         displayError(errorIconEmail, errorMessageEmail, emailInput);
+        emailInput.style.color = 'var(--red)';
         event.preventDefault(); 
       }
 
@@ -56,6 +60,7 @@ submitBtn.addEventListener('click', function(event) {
     else if (passwordValue.length < 8) {
         displayError(errorIconPassword, passwordError, passwordInput)
         event.preventDefault();
+        passwordInput.style.color = 'var(--red)';
         console.log(passwordValue.length);
     }
 });
@@ -82,6 +87,9 @@ function resetErrorStyles(errorIcon, errorMessage, inputField) {
     errorIcon.style.display = 'none';
     errorMessage.style.display = 'none';
     inputField.style.border = ''; // Reset the border to its default state
+    inputField.style.color = 'hsl(240, 7.7%, 5.1%)';
+    trialSection.style.top = '0px';
+    bottomSpace.style.display = 'none';
 }
 
 // Function to display error message and icon
@@ -89,6 +97,9 @@ function displayError(errorIcon, errorMessage, inputField) {
     errorIcon.style.display = 'block';
     errorMessage.style.display = 'block';
     inputField.style.border = '2px solid var(--red)';
+    inputField.setAttribute('placeholder', '');
+    trialSection.style.top = '10px';
+    bottomSpace.style.display = 'block';
 }
 
 // Function to validate email format
