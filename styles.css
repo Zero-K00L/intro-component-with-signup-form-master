@@ -21,7 +21,7 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--red);
+    background: url('images/bg-intro-mobile.png') center/contain repeat var(--red);
 }
 
 .main {
@@ -29,7 +29,6 @@ body {
     max-width: 375px;
     height: 1000px;
     margin: 0 auto;
-    background-image: url('images/bg-intro-mobile.png');
 }
 
 .header {
@@ -190,19 +189,64 @@ input {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .main {
+        max-width: 600px;
+    }
+
+    .trial-section {
+        width: 100%
+    }
+
+    .trial-advert {
+        max-width: 532px;
+    }
+
+    .fieldset {
+        max-width: 532px;
+    }
+
+    input {
+        max-width: 488px;
+    }
+
+    .error-icon {
+        left: 459px;
+    }
+
+    .error-message {
+        left: 353px;
+    }
+
+    .password-length-error {
+        left: 279px;
+    }
+
+    .form-btn {
+        max-width: 488px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .main {
+        max-width: 100%;
+    }
+
+    .header {
+        font-size: 40px;
+        width: 68%;
+        margin: 86px auto 28px auto;
+        line-height: 1.2;
+    }
+
+    .main-description {
+        font-size: 22px;
+        margin: 0 auto 65px auto;
+        width: 57%;
+    }
 } 
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
 
 /*Very Large devices (laptops/desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
@@ -227,6 +271,7 @@ input {
     }
 
     .header {
+        width: 100%;
         margin-top: 70px;
         margin-bottom: 29px;
         font-weight: 700;
@@ -236,6 +281,7 @@ input {
     }
    
     .main-description {
+        width: 100%;
         margin-left: 0;
         text-align: left;
         font-size: 16px;
