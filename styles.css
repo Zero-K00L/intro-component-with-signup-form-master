@@ -1,5 +1,4 @@
 /* Color Variables */
-
 :root {
     --red: hsl(0, 100%, 74%); 
     --green: hsl(154, 59%, 51%);
@@ -228,7 +227,6 @@ input {
     .form-btn {
         max-width: 488px;
     }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

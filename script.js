@@ -26,6 +26,7 @@ const submitBtn = document.querySelector('.form-btn');
 const trialSection = document.querySelector('.trial-section');
 const bottomSpace = document.querySelector('.bottom-space');
 
+// Clears input fields when the page is loaded or refreshed
 document.addEventListener('DOMContentLoaded', function() {
     firstNameInput.value = '';
     lastNameInput.value = '';
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     passwordInput.value = '';
 });
 
+// Checks for errors in user input and prevents submission if errors are present
 submitBtn.addEventListener('click', function(event) {
     if(firstNameInput.value.trim() === '') {
         displayError(errorIconFirstName, errorMessageFirstName, firstNameInput);
