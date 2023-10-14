@@ -210,9 +210,6 @@ input {
     }
 }
 
-
-
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .main {
@@ -429,7 +426,6 @@ input {
     }
 }
 
-
 /*Very Large devices (laptops/desktops, 1440px and up) */
 @media only screen and (min-width: 1440px) {
     body {
@@ -598,7 +594,7 @@ input {
 }
 
 /* Very Large devices (4K screens, 3840x2160 and up) */
-@media only screen and (min-width: 3840px) {
+@media only screen and (min-width: 3838px) {
     body {
         background: url('images/bg-intro-desktop.png') center/cover no-repeat var(--red);
     }
@@ -656,6 +652,7 @@ input {
         margin-top: 41px;
         font-size: 2.2rem;
         height: 178px;
+        border: solid 2px hsl(240, 1.5%, 86.9%); 
     }
   
     .form-btn {
@@ -702,6 +699,6 @@ input {
     .bottom-space {
         height: 1rem;
     }
-  }
+}
   
   

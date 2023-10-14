@@ -88,7 +88,7 @@ passwordInput.addEventListener('input', function () {
 function resetErrorStyles(errorIcon, errorMessage, inputField) {
     errorIcon.style.display = 'none';
     errorMessage.style.display = 'none';
-    inputField.style.border = ''; // Reset the border to its default state
+    inputField.style.border = ''; 
     inputField.style.color = 'hsl(240, 7.7%, 5.1%)';
     trialSection.style.top = '0px';
     bottomSpace.style.display = 'none';
@@ -104,7 +104,7 @@ function displayError(errorIcon, errorMessage, inputField) {
     bottomSpace.style.display = 'block';
 }
 
-// Function to validate email format
+// Function to validate email 
 function isValidEmail(email) {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
