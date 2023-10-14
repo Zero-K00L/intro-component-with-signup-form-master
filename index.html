@@ -13,51 +13,53 @@
 
   <body>
     <main class="main">
-      <h1 class="header">Learn to code by watching others</h1>
-      <p class="main-description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable.
-      </p>
-      <div class="trial-advert">
-        <p class="advert-text-1"><span class="advert-bold">Try it free 7 days</span> then </p>
-        <p class="advert-text-2">$20/mo. thereafter</p>
+      <div class="main-text">
+        <h1 class="header">Learn to code by watching others</h1>
+        <div class="description-container">
+          <p class="main-description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+            but understanding how developers think is invaluable.
+          </p>  
+        </div>
       </div>
-      <form class="form">
-        <fieldset class="fieldset">
-          <div class="form-box">
-            <input type="text" class="input first-name" name="firstName" placeholder="First Name" required>
-            <img class="error-icon icon-1" src="images/icon-error.svg" alt="Error Icon">
-            <p class="error-message error-message-1">First Name cannot be empty</p>
-          </div>
-
-          <div class="form-box">
-            <input type="text" class="input last-name" name="lastName" placeholder="Last Name" required>
-            <img class="error-icon icon-2" src="images/icon-error.svg" alt="Error Icon">
-            <p class="error-message error-message-2">Last Name cannot be empty</p>
-          </div>
-
-          <div class="form-box">
-            <input type="email" class="input email" name="email" placeholder="Email Address" required>
-            <img class="error-icon icon-3" src="images/icon-error.svg" alt="Error Icon">
-            <p class="error-message error-message-3">Looks like this is not an email</p>
-          </div>
-
-          <div class="form-box">
-            <input type="password" class="input password" name="password" placeholder="Password" required>
-            <img class="error-icon icon-4" src="images/icon-error.svg" alt="Error Icon">
-            <p class="error-message error-message-4">Password cannot be empty</p>
-          </div>
-
-          <button class="form-btn" type="submit">Claim your free trial</button>
-          <div class="disclaimer-container">
-            <p class="disclaimer">By clicking the button, you are agreeing to our <span class="disclaimer-terms">Terms and Services</span></p>
-          </div>
-          
-        </fieldset>
-      </form>
+      <div class="trial-section">
+        <div class="trial-advert">
+          <p class="advert-text-1"><span class="advert-bold">Try it free 7 days</span> then </p>
+          <p class="advert-text-2">$20/mo. thereafter</p>
+        </div>
+        <form class="form">
+          <fieldset class="fieldset">
+            <div class="form-box">
+              <input type="text" class="input first-name" name="firstName" placeholder="First Name" required>
+              <img class="error-icon icon-1" src="images/icon-error.svg" alt="Error Icon">
+              <p class="error-message error-message-1">First Name cannot be empty</p>
+            </div>
+            <div class="form-box">
+              <input type="text" class="input last-name" name="lastName" placeholder="Last Name" required>
+              <img class="error-icon icon-2" src="images/icon-error.svg" alt="Error Icon">
+              <p class="error-message error-message-2">Last Name cannot be empty</p>
+            </div>
+            <div class="form-box">
+              <input type="email" class="input email" name="email" placeholder="Email Address" required>
+              <img class="error-icon icon-3" src="images/icon-error.svg" alt="Error Icon">
+              <p class="error-message error-message-3">Looks like this is not an email</p>
+            </div>
+            <div class="form-box">
+              <input type="password" class="input password" name="password" placeholder="Password" required minlength="8" pattern=".{8,}">
+              <img class="error-icon icon-4" src="images/icon-error.svg" alt="Error Icon">
+              <p class="error-message error-message-4">Password cannot be empty</p>
+              <p class="error-message password-length-error">Password must be a least 8 characters long</p>
+            </div>
+            <button class="form-btn" type="submit">Claim your free trial</button>
+            <div class="disclaimer-container">
+              <p class="disclaimer">By clicking the button, you are agreeing to our <span class="disclaimer-terms">Terms and Services</span></p>
+            </div>
+            <div class="bottom-space"></div>
+          </fieldset>
+        </form>
+      </div>
     </main>
-    
     <footer>
-    <!-- <p class="attribution">
+      <!-- <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
       </p> -->
